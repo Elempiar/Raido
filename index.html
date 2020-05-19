@@ -1,170 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
     <meta charset="UTF-8" />
-    <title>Epischen Raido Site</title>
+    <title>Raido - Het mythische codeer avontuur!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="style/style.css" />
-    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+    <link rel='icon' href='favicon.ico' type='image/x-icon' />
   </head>
   <body>
-    <div id="hero">
-      <h1>osrs - huell</h1>
-      <p>an OSRS progress site</p>
-    </div>
     <nav>
-      <a class="left" href="https://oldschool.runescape.com/" target="_blank"
-        ><img src="src/osrs_icon.png" width="40px" height="40px"></a>
-      <a class="right" href="https://twitter.com/elempiar" target="_blank"><img src="src/twitter_icon.png" width="40px" height="40px"></a>
-      <a class="right" href="https://crystalmathlabs.com/tracker/track.php?player=huell" target="_blank"><img src="src/cml_icon.png" width="40px" height="40px"></a>
+      <a class="left" href="#" target="_blank"><img src="src/logoWhite.svg" width="30px" height="30px"></a>
     </nav>
+    <div class="clear"></div>
+    <div id="hero">
+      <img src="src/griffioen.png" alt="Raido Griffioen">
+      <h1>raido</h1>
+      <p>Het mythische codeer avontuur!</p>
+    </div>
     <main>
       <div class="part">
         <section class="title">
-          <h1>Overall Progression</h1>
+          <h1>Lorem Ipsum</h1>
         </section>
+        <div class="row" id="firstRow">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis velit et amet quisquam. Iure voluptatum commodi accusantium dolore totam ut, distinctio odit cumque, odio culpa, mollitia quam atque! Ullam, aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ea ab quam tenetur iure, aspernatur sint amet temporibus animi repellat? Nostrum minus enim, ad voluptates quis nulla alias voluptas totam.</p>
+        </div>
+        <div class="button">Download</div>
+      </div>
+      <div class="part">
+        <section class="title">
+          <h1>Opdrachten</h1>
+        </section>
+        <div class="row" id="firstRow">
+          <section class="columnLeft">
+            <img src="src/draak.png" alt="Draak">
+          </section>
+          <section class='columnRight'>
+            <h2>Opdracht 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate nesciunt beatae. Id, possimus itaque iste nulla, assumenda debitis quasi placeat dignissimos hic qui rerum incidunt tenetur quod molestias et?</p>
+          </section>
+        </div>
         <div class="row">
-          <div class="column" id="left">
-            <h2>Total Level</h2>
-            <div class="bar">
-              <div>
-                <span class="amount">1853</span>
-                <span>/</span>
-                <span class="total">2277</span>
-              </div>
-              <div class="progress" id="totalLevel"></div>
-            </div>
-          </div>
-          <div class="column" id="right">
-            <h2>Quest Points</h2>
-            <div class="bar">
-              <div>
-                <span class="amount">269</span>
-                <span>/</span>
-                <span class="total">269</span>
-              </div>
-              <div class="progress" id="questPoints"></div>
-            </div>
-          </div>
+          <section class="columnLeft">
+            <img src="src/feniks.png" alt="Feniks">
+          </section>
+          <section class='columnRight'>
+            <h2>Opdracht 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate nesciunt beatae. Id, possimus itaque iste nulla, assumenda debitis quasi placeat dignissimos hic qui rerum incidunt tenetur quod molestias et?</p>
+          </section>
         </div>
-      </div>
-      <div class="part">
-        <section class="title">
-          <h1>Personal Goals</h1>
-        </section>
-        <h2>100m Total XP</h2>
-        <div class="bar">
-          <div>
-            <span class="amount">76</span>
-            <span>/</span>
-            <span class="total">100</span>
-          </div>
-          <div class="progress" id="goalTotal"></div>
+        <div class="row">
+          <section class="columnLeft">
+            <img src="src/minotaurus.png" alt="Minotaurus">
+          </section>
+          <section class='columnRight'>
+            <h2>Opdracht 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate nesciunt beatae. Id, possimus itaque iste nulla, assumenda debitis quasi placeat dignissimos hic qui rerum incidunt tenetur quod molestias et?</p>
+          </section>
         </div>
-        <h2>99 Farming</h2>
-        <div class="bar">
-          <div>
-            <span class="amount">99</span>
-            <span>/</span>
-            <span class="total">99</span>
-          </div>
-          <div class="progress" id="goalFarm"></div>
+        <div class="row">
+          <section class="columnLeft">
+            <img src="src/zeemeermin.png" alt="Zeemeermin">
+          </section>
+          <section class='columnRight'>
+            <h2>Opdracht 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate nesciunt beatae. Id, possimus itaque iste nulla, assumenda debitis quasi placeat dignissimos hic qui rerum incidunt tenetur quod molestias et?</p>
+          </section>
         </div>
-        <h2>99 Cooking</h2>
-        <div class="bar">
-          <div>
-            <span class="amount">99</span>
-            <span>/</span>
-            <span class="total">99</span>
-          </div>
-          <div class="progress" id="goalCook"></div>
+        <div class="row">
+          <section class="columnLeft">
+            <img src="src/eenhoorn.png" alt="Eenhoorn">
+          </section>
+          <section class='columnRight'>
+            <h2>Opdracht 5</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptate nesciunt beatae. Id, possimus itaque iste nulla, assumenda debitis quasi placeat dignissimos hic qui rerum incidunt tenetur quod molestias et?</p>
+          </section>
         </div>
-          <h2>Base 80's</h2>
-        <div class="bar">
-          <div>
-            <span class="amount">13</span>
-            <span>/</span>
-            <span class="total">23</span>
-          </div>
-          <div class="progress" id="goal80s"></div>
-        </div>
-        <h2>All Hard Diaries</h2>
-        <div class="bar">
-          <div>
-            <span class="amount">12</span>
-            <span>/</span>
-            <span class="total">12</span>
-          </div>
-          <div class="progress" id="goalHards"></div>
-        </div>
-      </div>
-      <div class="part">
-        <section class="title">
-          <h1>Pet Hunt</h1>
-          <p>KC / Pet drop rate</p>
-        </section>
-        <h2>Vorkath</h2>
-        <div class="bar">
-          <div>
-            <span class="amount">296</span>
-            <span>/</span>
-            <span class="total">3000</span>
-          </div>
-          <div class="progress" id="vorkathKC"></div>
-        </div>
-        <h2>Giant Mole</h2>
-        <div class="bar">
-          <div>
-            <span class="amount">200</span>
-            <span>/</span>
-            <span class="total">3000</span>
-          </div>
-          <div class="progress" id="giantMoleKC"></div>
-        </div>
+        
       </div>
     </main>
     <footer>
-      <p>Stats last updated on July 22nd - 2019.</p>
-      <p>Elempiar© 1842 - 2019</p>
+      <p>Raido-Code Website | v0.01</p>
+      <p>Raido© 2020 - 2020</p>
     </footer>
   </body>
-
-  <script>
-    const progressBars = $(".bar");
-    const doAnimation = progressBar => {
-      const amount = parseInt(
-        $(progressBar)
-          .find(".amount")
-          .text(),
-        10
-      );
-      const total = parseInt(
-        $(progressBar)
-          .find(".total")
-          .text(),
-        10
-      );
-      const progressRatio = amount / total;
-      const maxColor = 255;
-      const progress = $(progressBar).find(".progress");
-      $(progress).css({
-        width: `${progressRatio * 100}%`,
-        backgroundColor: `rgb(${(1 - progressRatio) * maxColor},165, 0)`
-      });
-    };
-    const checkProgressBars = () => {
-      for (progressBar of progressBars) {
-        const progressBarYPosition = progressBar.getBoundingClientRect().top;
-        const offset = progressBarYPosition - window.innerHeight;
-        if (offset < 0) {
-          doAnimation(progressBar);
-        }
-      }
-    };
-    window.onscroll = checkProgressBars;
-  </script>  
-</html>
