@@ -13,6 +13,9 @@ body {
   margin: 0;
   text-align: center;
 }
+a{
+  text-decoration: none;
+}
 nav {
   display: block;
   position: fixed;
@@ -96,6 +99,12 @@ nav a:hover{
   margin: 0 auto;
   border-radius: 20px;
   padding: 10px;
+  cursor: pointer;
+  transition: ease-in .2s;
+}
+.button:hover{
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+  background: rgb(73, 112, 150);
 }
 .columnLeft {
   flex: 35%;
