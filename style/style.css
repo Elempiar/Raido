@@ -61,10 +61,10 @@ nav a:hover{
   box-shadow: none;
 }
 .part:nth-of-type(2) {
-  background-color: #d7efff;
+  background-color: #ffd7d7;
 }
 .part:nth-of-type(3) {
-  background-color: #b7e1ff;
+  background-color: #ffb7b7;
 }
 .row {
   display: flex;
@@ -109,7 +109,7 @@ h2 {
   width: 0%;
 }
 footer {
-  background-color: #0e446a;
+  background-color: #6a0e0e;
   padding-top: 3em;
   padding-bottom: 0.5em;
   color: #fff;
