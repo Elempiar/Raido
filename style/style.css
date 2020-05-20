@@ -119,6 +119,10 @@ nav a:hover{
   float: right;
   text-align: left;
 }
+p{
+  line-height: 1.5em;
+  margin-bottom: 2em;
+}
 h2 {
   font-weight: 700;
 }
