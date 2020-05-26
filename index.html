@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Raido - Het mythische codeer avontuur!</title>
+  <link rel="preload" as="font" href="fonts/ComicRunes.otf" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;700&display=swap">
-  <link rel="stylesheet" href="fonts/ComicRunes.otf">
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/style.css">
   <link rel='icon' href='favicon.ico' type='image/x-icon'>
@@ -27,6 +27,7 @@
     <div class="containerLarge">
       <img src="img/griffioen.png" alt="Raido Griffioen" height="500px">
       <img class="btnDownload" src="img/buttonDownload.svg" alt="Raido Download Button" width="100px">
+      <div class="clear"></div>
     </div>
     <div class="breakSection">
       <div class="container">
@@ -35,9 +36,47 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eveniet delectus neque ratione doloribus eum dignissimos amet commodi. Exercitationem necessitatibus earum amet autem omnis tempore facere quis ea? Expedita, earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facilis quaerat autem magnam nostrum et, quia expedita facere nihil saepe exercitationem cupiditate qui quod odio voluptatem fugit iusto minima molestias!</p>
       </div>
     </div>
+    <button class="accordion">Opdracht 1</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi odit officiis ratione consectetur molestiae consequuntur quia soluta ipsum nihil odio autem, fugiat nostrum, incidunt sit nulla aliquid quisquam repellat.</p>
+    </div>
+    <button class="accordion">Opdracht 2</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi odit officiis ratione consectetur molestiae consequuntur quia soluta ipsum nihil odio autem, fugiat nostrum, incidunt sit nulla aliquid quisquam repellat.</p>
+    </div>
+    <button class="accordion">Opdracht 3</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi odit officiis ratione consectetur molestiae consequuntur quia soluta ipsum nihil odio autem, fugiat nostrum, incidunt sit nulla aliquid quisquam repellat.</p>
+    </div>
+    <button class="accordion">Opdracht 4</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi odit officiis ratione consectetur molestiae consequuntur quia soluta ipsum nihil odio autem, fugiat nostrum, incidunt sit nulla aliquid quisquam repellat.</p>
+    </div>
+    <button class="accordion">Opdracht 5</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi odit officiis ratione consectetur molestiae consequuntur quia soluta ipsum nihil odio autem, fugiat nostrum, incidunt sit nulla aliquid quisquam repellat.</p>
+    </div>
   </main>
   <footer>
 
   </footer>
 </body>
+<script>
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+</script>
 </html>

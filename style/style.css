@@ -83,6 +83,38 @@ main{
   border-top: 2px solid #6699CC;
   border-bottom: 2px solid #6699CC;
 }
+.accordion{
+  background-color: #EEE;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .accordion:hover{
+  background-color: #CCC;
+}
+.accordion:after {
+  content: '\02795';
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+  outline: 0;
+}
+.active:after {
+  content: "\2796";
+}
+.panel{
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
 footer{
   height: 700px;
   background: #C5D6E2;
