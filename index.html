@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Raido - Het mythische codeer avontuur!</title>
   <link rel="preload" as="font" href="fonts/ComicRunes.otf" type="font/woff2" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/style.css">
   <link rel='icon' href='favicon.ico' type='image/x-icon'>
@@ -36,9 +36,17 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eveniet delectus neque ratione doloribus eum dignissimos amet commodi. Exercitationem necessitatibus earum amet autem omnis tempore facere quis ea? Expedita, earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facilis quaerat autem magnam nostrum et, quia expedita facere nihil saepe exercitationem cupiditate qui quod odio voluptatem fugit iusto minima molestias!</p>
       </div>
     </div>
-    <button class="accordion">Opdracht 1</button>
+    <button class="accordion" id="opdracht1">Opdracht 1</button>
     <div class="panel">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sequi odit officiis ratione consectetur molestiae consequuntur quia soluta ipsum nihil odio autem, fugiat nostrum, incidunt sit nulla aliquid quisquam repellat.</p>
+      <div class="panelWrapper">
+        <img src="img/draak.png" alt="Raido Draak">
+        <h2>De basics</h2>
+        <h3>Draak</h3>
+        <div class="clear"></div>
+      </div>
+      <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vitae officiis itaque enim nemo at cumque molestias. Vel aut nulla distinctio earum itaque velit blanditiis odio ipsum, accusamus accusantium id! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, vero dolorum eum non reprehenderit ex accusamus repudiandae dolor, mollitia, quia error a at cum? Aut ab unde sunt. Harum, ut?</p>
+      </div>
     </div>
     <button class="accordion">Opdracht 2</button>
     <div class="panel">
@@ -61,6 +69,7 @@
 
   </footer>
 </body>
+
 <script>
 
 var acc = document.getElementsByClassName("accordion");
@@ -79,4 +88,5 @@ for (i = 0; i < acc.length; i++) {
 }
 
 </script>
+
 </html>
