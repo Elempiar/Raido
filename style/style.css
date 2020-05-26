@@ -95,13 +95,13 @@ main{
 .active, .accordion:hover{
   background-color: #CCC;
 }
-.accordion:after {
+.accordion:after{
   content: '\02795';
   font-size: 13px;
   float: right;
   margin-left: 5px;
 }
-.active:after {
+.active:after{
   content: "\2796";
 }
 .panel{
@@ -117,8 +117,58 @@ main{
   background-color: rgba(76, 175, 78);
 }
 #opdracht1 + .panel{
+  background-color: rgba(76, 175, 78);
   background-image: url(/img/backgroundDraak.png);
   background-size: 700px;
+  border-top: 1px solid rgb(196, 217, 93);
+}
+#opdracht2{
+  background-color: rgba(141, 97, 80, 0.8);
+}
+#opdracht2.active, #opdracht2:hover{
+  background-color: rgb(141, 97, 80);
+}
+#opdracht2 + .panel{
+  background-color: rgb(141, 97, 80);
+  background-image: url(/img/backgroundMinotaurus.png);
+  background-size: 700px;
+  border-top: 1px solid rgb(247, 156, 126);
+}
+#opdracht3{
+  background-color: rgba(239, 68, 56, 0.8);
+}
+#opdracht3.active, #opdracht3:hover{
+  background-color: rgb(239, 68, 56);
+}
+#opdracht3 + .panel{
+  background-color: rgb(239, 68, 56);
+  background-image: url(/img/backgroundFeniks.png);
+  background-size: 700px;
+  border-top: 1px solid rgb(248, 153, 29);
+}
+#opdracht4{
+  background-color: rgba(44, 55, 136, 0.8);
+}
+#opdracht4.active, #opdracht4:hover{
+  background-color: rgb(44, 55, 136);
+}
+#opdracht4 + .panel{
+  background-color: rgb(44, 55, 136);
+  background-image: url(/img/backgroundZeemeermin.png);
+  background-size: 700px;
+  border-top: 1px solid #131135;
+}
+#opdracht5{
+  background-color: rgba(245, 165, 200, 0.8);
+}
+#opdracht5.active, #opdracht5:hover{
+  background-color: rgb(245, 165, 200);
+}
+#opdracht5 + .panel{
+  background-color: rgb(245, 165, 200);
+  background-image: url(/img/backgroundEenhoorn.png);
+  background-size: 700px;
+  border-top: 1px solid rgb(249, 242, 191);
 }
 .panelWrapper{
   width: 600px;
@@ -170,8 +220,8 @@ p{
   font-family: 'Comic Runes';
   font-size: 2em;
   margin-top: 50px;
-  line-height: 1.5em;
-  margin-bottom: .2em;
+  line-height: 1em;
+  margin-bottom: .5em;
 }
 .panelWrapper h3{
   font-size: 1.2em;
