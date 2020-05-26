@@ -1,142 +1,109 @@
-img {
-  max-width: 100%;
-  height: auto;
+body{
+  background: #C5D6E2;
 }
 .clear{
   clear: both;
 }
-html {
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-}
-body {
-  margin: 0;
-  text-align: center;
-}
-a{
-  text-decoration: none;
-}
-nav {
-  display: block;
-  position: fixed;
+nav{
+  height: 80px;
   width: 100%;
-  background-color: #6699CC;
-  height: 40px;
-  z-index: 999;
-  padding-top: 10px;
-}
-nav a.left {
-  float: left;
-  margin-left: 100px;
-}
-nav a:hover{
-    opacity: 0.5;
-    transition: opacity 200ms ease-in-out;
-}
-#hero {
-  width: 100%;
-  height: 700px;
-  background-color: #6699CC;
-  color: #fff;
-  margin-bottom: -50px;
-  position: relative;
-  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.4);
-}
-#hero img{
-  transform: scaleX(-1);
-  height: 500px;
-  bottom: 100px;
   position: absolute;
-  bottom: 0px;
-  right: 100px;
+  padding: 0 120px;
+  box-sizing: border-box;
+  z-index: 999;
 }
-#hero h1 {
-  padding-top: 50px;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 7em;
-  font-weight: 600;
+nav img{
+  height: 80px;
 }
-#hero p {
-  margin: 0;
-  font-size: 1.5em;
-}
-.part {
-  width: auto;
-  height: auto;
-  padding-top: 7em;
-  padding-bottom: 7em;
-  box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, 0.4);
-}
-.part:nth-of-type(1) {
-  background-color: #fff;
-}
-.part:nth-of-type(2) {
-  background-color: rgb(175, 222, 255);
-}
-.row {
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  padding: 1em 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-}
-#firstRow{
-  border: none;
-}
-.title h1{
-  font-size: 3em;
-  margin: 0;
-  font-weight: 600;
-  margin-bottom: 1em;
-}
-.button{
-  background: #6699CC;
-  color: white;
-  text-transform: uppercase;
-  font-weight: 700;
-  width: 200px;
-  margin: 0 auto;
-  border-radius: 20px;
-  padding: 10px;
-  cursor: pointer;
-  transition: ease-in .2s;
-}
-.button:hover{
-  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
-  background: rgb(73, 112, 150);
-}
-.columnLeft {
-  flex: 35%;
-  float: left;
-  text-align: center;
-}
-.columnLeft img{
-  height: 300px;
-}
-.columnRight {
-  flex: 65%;
+nav ul{
   float: right;
-  text-align: left;
+}
+nav ul li{
+  float: left;
+  margin: 0 40px;
+  line-height: 100px;
+}
+nav ul li:last-of-type{
+  margin-right: 0px;
+}
+nav a{
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+header{
+  height: 700px;
+  position: relative;
+  background: #C5D6E2;
+  background-image: url("/img/repeatableClouds.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 1000px;
+}
+header img{
+  width: 600px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+header #subLogo{
+  width: 600px;
+  position: absolute;
+  bottom: 70px;
+  right: 50px;
+  text-align: center;
+  font-family: 'Comic Runes';
+  text-transform: uppercase;
+  font-size: 45px;
+  color: #E5AF40;
+  text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+}
+main{
+  background: white;
+}
+.container{
+  width: 800px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.containerLarge{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.btnDownload{
+  height: 500px;
+  margin-right: 200px;
+  float: right;
+}
+.breakSection{
+  background: #C5D6E2;
+  border-top: 2px solid #6699CC;
+  border-bottom: 2px solid #6699CC;
+}
+footer{
+  height: 700px;
+  background: #C5D6E2;
+  background-image: url("/img/repeatableClouds.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 1000px;
+  transform: scaleY(-1);
+}
+
+/* Typography */
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+h1{
+  font-family: 'Comic Runes';
+  font-size: 2em;
+  margin-bottom: 1.5em;
 }
 p{
-  line-height: 1.5em;
-  margin-bottom: 2em;
-}
-h2 {
-  font-weight: 700;
-}
-footer {
-  background-color: #6699CC;
-  padding-top: 3em;
-  padding-bottom: 0.5em;
-  color: #fff;
-  box-shadow: inset 0px 14px 21px -8px rgba(0, 0, 0, 0.41);
-}
-footer p {
-  margin: 0;
-  font-size: 0.9em;
-}
-footer p:last-of-type {
-  padding-top: 8em;
+  margin-bottom: 1.5em;
 }

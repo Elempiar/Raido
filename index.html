@@ -1,90 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Raido - Het mythische codeer avontuur!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="style/style.css" />
-    <link rel='icon' href='favicon.ico' type='image/x-icon' />
-  </head>
-  <body>
-    <nav>
-      <a class="left" href="#" target="_self"><img src="src/logoWhite.svg" width="30px" height="30px"></a>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <title>Raido - Het mythische codeer avontuur!</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;700&display=swap">
+  <link rel="stylesheet" href="fonts/ComicRunes.otf">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel='icon' href='favicon.ico' type='image/x-icon'>
+</head>
+<body>
+  <nav>
+    <a href="#"><img src="img/logoWhite.svg" alt="Raido Code Logo" height="50px" width="50px"></a>
+    <ul>
+      <li><a href="#">Raido</a></li>
+      <li><a href="#">Workshops</a></li>
+      <li><a href="#">Tutorials</a></li>
+    </ul>
     <div class="clear"></div>
-    <div id="hero">
-      <img src="src/griffioen.png" alt="Raido Griffioen">
-      <h1>raido</h1>
-      <p>Het mythische codeer avontuur!</p>
+  </nav>
+  <header>
+    <img src="img/logoText.svg" alt="Raido. Het mythische codeer avontuur!">
+    <div id="subLogo">Het mythische codeer avontuur!</div>
+  </header>
+  <main>
+    <div class="containerLarge">
+      <img src="img/griffioen.png" alt="Raido Griffioen" height="500px">
+      <img class="btnDownload" src="img/buttonDownload.svg" alt="Raido Download Button" width="100px">
     </div>
-    <main>
-      <div class="part">
-        <section class="title">
-          <h1>Het verhaal</h1>
-        </section>
-        <div class="row" id="firstRow">
-          <p>De Griffioen voelt zich de laatste tijd erg alleen, nu hij wat ouder is en het nest verlaten heeft, is hij al zijn vrienden kwijtgeraakt. Maar, er is nog hoop! Jij als codeer-leerling kan het verschil maken voor de Griffioen. Wat ga je dan doen? Nou, je gaat een nieuw vriendje maken door middel van een aantal codeerlessen. Jij gaat jouw eigen mythische wezen of fabeldier maken. Om dit te kunnen doen moeten er een aantal dingen geleerd worden. Een aantal dieren die de Griffioen kent gaan jou helpen met het ontwikkelen van een nieuw vriendje voor de eenzame vogel.</p>
-        </div>
-        <a href="src/werkboekjeTestMickey.pdf" download><div class="button">Download</div></a>
+    <div class="breakSection">
+      <div class="container">
+        <h1>Het verhaal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nesciunt temporibus nemo sed itaque deserunt quaerat magni impedit quas libero. Necessitatibus illum, ex laudantium suscipit iusto dolores hic delectus cum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, asperiores necessitatibus? Vero aut error quas dolorum qui temporibus expedita optio beatae saepe non perspiciatis delectus enim, neque vitae, nostrum doloremque.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eveniet delectus neque ratione doloribus eum dignissimos amet commodi. Exercitationem necessitatibus earum amet autem omnis tempore facere quis ea? Expedita, earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facilis quaerat autem magnam nostrum et, quia expedita facere nihil saepe exercitationem cupiditate qui quod odio voluptatem fugit iusto minima molestias!</p>
       </div>
-      <div class="part">
-        <section class="title">
-          <h1>Opdrachten</h1>
-        </section>
-        <div class="row" id="firstRow">
-          <section class="columnLeft">
-            <img src="src/draak.png" alt="Draak">
-          </section>
-          <section class='columnRight'>
-            <h2>Opdracht 1</h2>
-            <p>We beginnen natuurlijk bij de basis. Mocht je de basis op gebied van coderen al kennen, dan kan je opdracht 1 overslaan. Toch raden wij je aan de video’s allemaal te bekijken!</p>
-            <p>In de eerste opdrachten laten we de leerlingen kijken naar de basis. Wat is P5, hoe kan je het gebruiken, wat kan je ermee? Ook gaan we hierin uitleggen hoe je een code op moet stellen, denk hierbij aan de setup en de draw functies. We gaan uitleggen hoe P5 werkt, zo snel en makkelijk mogelijk. Wie kan die basis beter uitleggen dan de eeuwenoude draak. Hij mag dan oud zijn, maar vergis je niet in de kennis van dit wezen! De opdracht is dan ook om je setup en je draw op te stellen en ook een grijze of witte achtergrond te maken op een canvas met een specifieke grootte.</p>
-          </section>
-        </div>
-        <div class="row">
-          <section class="columnLeft">
-            <img src="src/minotaurus.png" alt="Minotaurus">
-          </section>
-          <section class='columnRight'>
-            <h2>Opdracht 2</h2>
-            <p>De minotaurus zal je gaan uitleggen wat de X en Y as is en hoe je deze kan manipuleren in jouw code. Ook leer je hier hoe je iets kan positioneren en geven we jou een voorbeeld van hoe je de positie van iets kan veranderen.</p>
-          </section>
-        </div>
-        <div class="row">
-          <section class="columnLeft">
-            <img src="src/feniks.png" alt="Feniks">
-          </section>
-          <section class='columnRight'>
-            <h2>Opdracht 3</h2>
-            <p>In de derde opdracht gaan we het hebben over vormen. Denk hierbij aan rect, triangle, line, ellipse en ga zo maar door. We houden het zo makkelijk mogelijk en in het spiekbriefje (werkboek) kan je teruglezen hoe de code opgesteld moet worden. Maar, we leggen in de tutorial video eerst gevisualiseerd uit hoe het allemaal werkt! Wie gaat ons daarbij helpen? Juist, de Feniks, een wezen dat zijn eigen vorm kan manipuleren. De opdracht is om alle vormen 1 keer te maken.</p>
-          </section>
-        </div>
-        <div class="row">
-          <section class="columnLeft">
-            <img src="src/zeemeermin.png" alt="Zeemeermin">
-          </section>
-          <section class='columnRight'>
-            <h2>Opdracht 4</h2>
-            <p>In de derde opdracht gaan we het hebben over kleuren. Hoe kan je een fill gebruiken en hoe kan je lijnen een kleur geven? We leggen hierin simpel uit hoe RGB werkt en hoe je kleuren kan maken door dit te mengen. Dit doen we met voorbeelden. Ook hier is de API terug te vinden in het werkboekje.</p>
-            <p>De opdracht: Geef de vormen uit opdracht 2 allemaal een kleur. Als het goed is heb je vier vormen. Maak een vorm rood, groen en blauw. Probeer daarna de kleur paars te maken in de vierde vorm. Wie zal je dit keer helpen? Als er één wezen is dat veel kleuren ziet, dan is het de zeemeermin. In de zee zijn kleuren te zien die je misschien nog nooit hebt gezien.</p>
-          </section>
-        </div>
-        <div class="row">
-          <section class="columnLeft">
-            <img src="src/eenhoorn.png" alt="Eenhoorn">
-          </section>
-          <section class='columnRight'>
-            <h2>Opdracht 5</h2>
-            <p>De laatste opdracht staat in het kader van fantasie en creativiteit. Het is nu aan de leerling om alles uit de vorige opdrachten te combineren! Wie weet er alles van fantasie? Juist, de fantasierijke eenhoorn! Zij zal je helpen om jouw eigen mythische wezen te maken. We leren je hier hoe je alles uit de vorige opdrachten kan combineren.</p>
-            <p>Maar, eerst gaat de leerling zijn of haar eigen wezen bedenken. Dit kan op de schetspagina’s in het werkboekje. Vervolgens gaat de leerling zo goed mogelijk proberen dit dier na te maken. Is de leerling klaar? Neem contact op met een iemand uit ons groepje en wij zullen het eindresultaat opslaan. Op het einde combineren we alle resultaten. Zo heeft de griffioen genoeg nieuwe vriendjes om mee te spelen!</p>
-          </section>
-        </div>
-        
-      </div>
-    </main>
-    <footer>
-      <p>Raido-Code Website | v0.02</p>
-      <p>Raido© 2020 - 2020</p>
-    </footer>
-  </body>
-  </html>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
