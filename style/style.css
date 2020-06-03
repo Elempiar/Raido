@@ -3,13 +3,12 @@
   src: url('/fonts/ComicRunes.woff2') format('woff2'),
   url('/fonts/ComicRunes.woff') format('woff'),
   url('/fonts/ComicRunes.ttf') format('truetype');
-
-}
-body{
-  background: #C5D6E2;
 }
 .clear{
   clear: both;
+}
+body{
+  background: #C5D6E2;
 }
 nav{
   height: 80px;
@@ -89,11 +88,31 @@ main{
   width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
+  position: relative;
+}
+a.download:hover > .btnCloud{
+  top: 130px;
 }
 .btnDownload{
   height: 500px;
-  margin-right: 200px;
-  float: right;
+  position: absolute;
+  right: 250px;
+  top: 60px;
+}
+.btnCloud{
+  width: 600px;
+  position: absolute;
+  right: 0;
+  top: 135px;
+  transition: all .2s ease-out;
+}
+.btnText{
+  position: absolute;
+  right: 150px;
+  top: 400px;
+  font-family: 'Comic Runes';
+  font-size: 40px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 .breakSection{
   background: #C5D6E2;
@@ -217,7 +236,7 @@ main{
   margin-bottom: 0;
 }
 footer{
-  height: 700px;
+  height: 500px;
   background: #C5D6E2;
   background-image: url("/img/repeatableClouds.svg");
   background-position: bottom;
@@ -234,6 +253,10 @@ body{
 }
 .accordion{
   font-size: 20px;
+}
+a{
+  color: #000;
+  text-decoration: none;
 }
 h1{
   font-family: 'Comic Runes';
