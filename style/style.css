@@ -43,9 +43,6 @@ nav a{
   text-decoration: none;
   text-transform: capitalize;
 }
-nav img:hover{
-  border-bottom: 4px solid rgba(255, 255, 255, 1);
-}
 nav ul li:hover{
   border-bottom: 4px solid rgba(255, 255, 255, 1);
 }
@@ -59,10 +56,10 @@ header{
   background-size: 1000px;
 }
 header img{
-  width: 600px;
+  width: 1200px;
   position: absolute;
-  bottom: 50px;
-  right: 50px;
+  bottom: -100px;
+  right: -260px;
 }
 header #subLogo{
   width: 600px;
@@ -132,13 +129,14 @@ a.download:hover > .btnCloud{
   background-color: #CCC;
 }
 .accordion:after{
-  content: '\02795';
-  font-size: 13px;
+  content: '\002B';
   float: right;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
   margin-left: 5px;
 }
 .active:after{
-  content: "\2796";
+  content: "\002D";
 }
 .panel{
   padding: 0 18px;
