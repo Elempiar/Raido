@@ -8,7 +8,7 @@
   clear: both;
 }
 body{
-  background: #C5D6E2;
+  background: #6699CC;
 }
 nav{
   height: 80px;
@@ -46,22 +46,57 @@ nav a{
 nav ul li:hover{
   border-bottom: 4px solid rgba(255, 255, 255, 1);
 }
-header{
+header.home{
+  height: 1100px;
+  position: relative;
+  background: #6699CC;
+  background-image: url("/img/repeatableClouds.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 1500px;
+}
+header.home #logo{
+  width: 1200px;
+  position: absolute;
+  top: 100px;
+  left: -200px;
+}
+header.home #subLogo{
+  width: 600px;
+  position: absolute;
+  top: 495px;
+  left: 85px;
+  text-align: center;
+  font-family: 'ComicRunes';
+  text-transform: uppercase;
+  font-size: 45px;
+  color: #E5AF40;
+  text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+}
+header.home #illustration{
+  float: right;
+  transform: scaleX(-1);
+  width: 465px;
+  margin-top: 480px;
+  margin-right: 120px;
+
+}
+header.workshop{
   height: 700px;
   position: relative;
-  background: #C5D6E2;
+  background: #6699CC;
   background-image: url("/img/repeatableClouds.svg");
   background-position: bottom;
   background-repeat: repeat-x;
   background-size: 1000px;
 }
-header img{
+header.workshop #logo{
   width: 1200px;
   position: absolute;
   bottom: -100px;
   right: -260px;
 }
-header #subLogo{
+header.workshop #subLogo{
   width: 600px;
   position: absolute;
   bottom: 70px;
@@ -80,21 +115,65 @@ main{
   width: 800px;
   margin: 0 auto;
   padding: 100px 0;
+  display: grid;
 }
 .containerLarge{
   width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
+  display: grid;
   position: relative;
+}
+.leftHalf{
+  grid-column: 1;
+  margin-right: 30px;
+}
+.rightHalf{
+  grid-column: 2;
+  margin-left: 30px;
+}
+.leftTri{
+  grid-column: 1;
+  margin-left: 0;
+}
+.middleTri{
+  grid-column: 2;
+  margin: 0 20px;
+}
+.rightTri{
+  grid-column: 3;
+  margin-right: 0;
+}
+.container + .container{
+  padding-top: 0;
+  margin-top: -50px;
+}
+iframe{
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+.sectionLeft .container{
+  padding-left: 200px;
+}
+.sectionRight .container{
+  padding-right: 200px;
 }
 a.download:hover > .btnCloud{
   top: 130px;
+}
+a.download:hover > .btnDownload{
+  top: 55px;
+}
+a.download:hover > .btnText{
+  top: 395px;
 }
 .btnDownload{
   height: 500px;
   position: absolute;
   right: 250px;
   top: 60px;
+  transition: all .2s ease-out;
 }
 .btnCloud{
   width: 600px;
@@ -110,11 +189,81 @@ a.download:hover > .btnCloud{
   font-family: 'ComicRunes';
   font-size: 40px;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all .2s ease-out;
 }
-.breakSection{
+.sectionCentered{
   background: #C5D6E2;
   border-top: 2px solid #6699CC;
   border-bottom: 2px solid #6699CC;
+}
+.sectionLeft{
+  background: #C5D6E2;
+  border: 2px solid #6699CC;
+  border-left: none;
+  margin-right: 200px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.sectionRight{
+  background: #C5D6E2;
+  border: 2px solid #6699CC;
+  border-right: none;
+  margin-right: 0px;
+  margin-left: 200px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.sectionClouds{
+  padding-top: 200px;
+  background: #C5D6E2;
+  background-image: url("/img/repeatableCloudsFlipped.svg");
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size: 1000px;
+  border-bottom: 2px solid #6699CC;
+}
+.sectionClean{
+  background: white;
+}
+.thumbnailLarge{
+  width: 345px;
+  height: 345px;
+  background: white;
+}
+.thumbnailTall{
+  width: 200px;
+  height: 290px;
+  background: white;
+  margin: 0 auto 1em;
+}
+.review{
+  width: 200px;
+  height: 260px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 20px auto 0;
+  transition: all .2s ease-out;
+}
+.leftTri > .review{
+  margin-left: 0;
+}
+.rightTri > .review{
+  margin-right: 0;
+}
+.reviewLarge{
+  width: 240px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  transition: all .2s ease-out;
+}
+#team h2{
+  margin-bottom: 2em;
+}
+#team .leftTri, #team .middleTri, #team .rightTri{
+  text-align: center;
+}
+#team img{
+  margin-bottom: 1.5em;
 }
 .accordion{
   cursor: pointer;
@@ -124,6 +273,12 @@ a.download:hover > .btnCloud{
   border: none;
   outline: none;
   transition: 0.4s;
+}
+.accordionTitle{
+  margin-right: 30px;
+}
+.accordionSub{
+  margin-left: 30px;
 }
 .active, .accordion:hover{
   background-color: #CCC;
@@ -140,9 +295,10 @@ a.download:hover > .btnCloud{
 }
 .panel{
   padding: 0 18px;
+  margin: 0 100px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.4s ease-out;
 }
 #opdracht1{
   background-color: rgba(76, 175, 78, 0.8);
@@ -235,12 +391,35 @@ a.download:hover > .btnCloud{
 }
 footer{
   height: 500px;
-  background: #C5D6E2;
-  background-image: url("/img/repeatableClouds.svg");
-  background-position: bottom;
+  padding-top: 200px;
+  background-image: url("/img/repeatableCloudsFlipped.svg");
+  background-position: top;
   background-repeat: repeat-x;
   background-size: 1000px;
-  transform: scaleY(-1);
+}
+#footer ul{
+  width: 200px;
+  color: white;
+  font-size: 12px;
+  line-height: 2em;
+  grid-row: 1;
+  padding: 5px;
+}
+#footer ul .listTitle{
+  font-weight: 700;
+}
+#footer ul li a{
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+#footer ul li a:hover{
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+#footer ul li + .listTitle{
+  margin-top: 2em;
 }
 
 /* Typography */
@@ -249,21 +428,61 @@ body{
   font-size: 20px;
   line-height: 1.5em;
 }
-.accordion{
-  font-size: 20px;
+p{
+  margin-bottom: 1.5em;
 }
 a{
   color: #000;
   text-decoration: none;
 }
+.accordion{
+  font-family: 'Crimson Text', serif;
+  font-size: 22px;
+}
+.accordionTitle{
+  font-weight: 700;
+}
 h1{
-  font-family: 'ComicRunes';
+  font-family: 'Crimson Text', serif;;
   font-size: 2em;
   margin-bottom: 1.5em;
+  font-weight: 700;
 }
-p{
+h1.center{
+  text-align: center;
+  margin: 0;
+}
+h2{
+  font-family: 'Crimson Text', serif;;
+  font-size: 1.5em;
+  font-weight: 700;
   margin-bottom: 1.5em;
 }
+h3{
+  font-family: 'Crimson Text', serif;;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+h3 + p{
+  font-size: 0.8em;
+  margin-bottom: 1.5em;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+}
+h4{
+  font-family: 'Crimson Text', serif;;
+  font-size: 1.3em;
+  font-weight: 400;
+  padding-left: 32px;
+}
+h4 + p{
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-bottom: 1.5em;
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 32px;
+}
+
 .panelWrapper h2{
   font-family: 'ComicRunes';
   font-size: 2em;
@@ -272,6 +491,7 @@ p{
   margin-bottom: .5em;
 }
 .panelWrapper h3{
-  font-size: 1.2em;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.4em;
   font-weight: 600;
 }
