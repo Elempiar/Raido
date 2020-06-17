@@ -116,21 +116,25 @@ main{
   margin: 0 auto;
   padding: 100px 0;
   display: grid;
+  grid-gap: 20px;
 }
 .containerLarge{
   width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
   display: grid;
+  grid-gap: 20px;
   position: relative;
 }
 .leftHalf{
   grid-column: 1;
-  margin-right: 30px;
+}
+.leftHalf img{
+  width: 100%;
+  height: auto;
 }
 .rightHalf{
   grid-column: 2;
-  margin-left: 30px;
 }
 .leftTri{
   grid-column: 1;
@@ -138,11 +142,9 @@ main{
 }
 .middleTri{
   grid-column: 2;
-  margin: 0 20px;
 }
 .rightTri{
   grid-column: 3;
-  margin-right: 0;
 }
 .container + .container{
   padding-top: 0;
@@ -295,7 +297,6 @@ a.download:hover > .btnText{
 }
 .panel{
   padding: 0 18px;
-  margin: 0 100px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
