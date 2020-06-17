@@ -4,6 +4,9 @@
   url('/fonts/ComicRunes.woff') format('woff'),
   url('/fonts/ComicRunes.ttf') format('truetype');
 }
+:root {
+  --mainColor: #E5AF40;
+}
 .clear{
   clear: both;
 }
@@ -11,17 +14,16 @@ body{
   background: #6699CC;
 }
 nav{
-  height: 80px;
+  height: 50px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   padding: 0 120px;
   box-sizing: border-box;
   z-index: 999;
+  background: #6699CC;
 }
 nav img{
-  height: 100px;
-  border-bottom: 4px solid rgba(255, 255, 255, 0);
-  transition: border-bottom .2s ease-out;
+  height: 80px;
 }
 nav ul{
   float: right;
@@ -29,22 +31,32 @@ nav ul{
 nav ul li{
   float: left;
   margin: 0 50px;
-  line-height: 100px;
-  border-bottom: 4px solid rgba(255, 255, 255, 0);
-  transition: border-bottom .2s ease-out;
+  padding: 0 10px;
+  line-height: 50px;
 }
 nav ul li:last-of-type{
   margin-right: 0px;
 }
-nav a{
+nav ul li{
   font-size: 20px;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
   text-transform: capitalize;
+  background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-size .2s;
 }
 nav ul li:hover{
-  border-bottom: 4px solid rgba(255, 255, 255, 1);
+  background-size: 4px 50px;
 }
 header.home{
   height: 1100px;
@@ -94,13 +106,13 @@ header.workshop #logo{
   width: 1200px;
   position: absolute;
   bottom: -100px;
-  right: -260px;
+  left: -260px;
 }
 header.workshop #subLogo{
   width: 600px;
   position: absolute;
   bottom: 70px;
-  right: 50px;
+  left: 50px;
   text-align: center;
   font-family: 'ComicRunes';
   text-transform: uppercase;
