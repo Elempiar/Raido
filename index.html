@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raido - Het mythische codeer avontuur!</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="style/reset.css">
@@ -9,23 +10,41 @@
   <link rel='icon' href='favicon.ico' type='image/x-icon'>
 </head>
 <body>
-  <nav>
-    <img src="img/logoWhite.svg" alt="Raido Code Logo" height="50px" width="50px">
+  <nav class="desktopOnly" id="desktopNav">
+    <div class="containerNav">
+      <img src="img/logoWhite.svg" alt="Raido Code Logo" height="50px" width="50px">
+      <ul>
+        <a href="index.html"><li>Raido</li></a>
+        <a href="#workshops"><li>Workshops</li></a>
+        <a href="#opdrachten"><li>Opdrachten</li></a>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </nav>
+  <nav class="mobileOnly" id="mobileNav">
+    <div class="containerNav">
+      <img src="img/logoWhite.svg" alt="Raido Code Logo" height="50px" width="50px">
+      <button id="hamburger"><img src="img/buttonHamburger.svg" alt="Hamburger button" height="50px"></button>
+      <div class="clear"></div>
+    </div>
+  </nav>
+  <div class="navBox mobileOnly">
     <ul>
+      <button id="close"><li><img src="img/buttonClose.svg" alt="Close button" height="30px"></li></button>
       <a href="index.html"><li>Raido</li></a>
       <a href="#workshops"><li>Workshops</li></a>
       <a href="#opdrachten"><li>Opdrachten</li></a>
     </ul>
-    <div class="clear"></div>
-  </nav>
+  </div>
   <header class="home">
+    <div class="containerHero">
     <img id="logo" src="img/logoText.svg" alt="Raido. Het mythische codeer avontuur!">
-    <div id="subLogo">Het mythische codeer avontuur!</div>
     <img id="illustration" src="img/griffioen.png" alt="Raido Griffioen">
+    </div>
   </header>
   <main>
-    <div class="container">
-      <h1>Raido. Coderen voor Kids</h1>
+    <div class="containerNoneGrid">
+      <img class="introLogo" src="img/logoTextBlack.svg" alt="Raido." height="60px"><h1 class="introText">coderen voor kids</h1>
       <p>Maak kennis met onze mythische wezens die staan te popelen om de nieuwe generatie een proefje te geven van het vak van de toekomst!</p>
     </div>
     <div class="sectionLeft">
@@ -57,18 +76,18 @@
           <p>Ideaal voor leerlingen van ~11-12 jaar.</p>
         </div>
       </div>
-      <div class="container">
-        <div class="leftTri">
+      <div class="container threeColumns workshops">
+        <div>
           <div class="thumbnailTall"></div>
           <h4>Workshop 1</h4>
           <p>3 uur</p>
         </div>
-        <div class="middleTri">
+        <div>
           <div class="thumbnailTall"></div>
           <h4>Workshop 2</h4>
           <p>2 uur</p>
         </div>
-        <div class="rightTri">
+        <div>
           <div class="thumbnailTall"></div>
           <h4>Workshop 3</h4>
           <p>2 uur</p>
@@ -77,7 +96,7 @@
     </div>
     <div class="sectionClean">
       <div class="container">
-        <h2>Reviews</h2>
+        <h1>Reviews</h1>
         <div class="leftTri">
           <div class="review"></div>
         </div>
@@ -90,19 +109,19 @@
       </div>
     </div>
     <div class="sectionRight">
-      <div class="container" id="team">
-        <h2 style="grid-column: 2;">Het team achter Raido</h2>
-        <div class="leftTri">
+      <div class=" container teamFaces" id="team">
+        <h2 class="facesTitle">Het team achter Raido</h2>
+        <div>
           <img src="img/raidoMalvin.png" alt="Raido C.E.O. Malvin Schuivens." width="220px">
           <h3>Malvin Schuivens</h3>
           <p>C.E.O.</p>
         </div>
-        <div class="middleTri">
+        <div >
           <img src="img/raidoLuuk.png" alt="Raido C.E.O. Malvin Schuivens." width="220px">
           <h3>Luuk Verboeket</h3>
           <p>Hackerman</p>
         </div>
-        <div class="rightTri">
+        <div >
           <img src="img/raidoSiri.png" alt="Raido C.E.O. Malvin Schuivens." width="220px">
           <h3>Siri Slijpen</h3>
           <p>Master of Design</p>
@@ -111,7 +130,7 @@
     </div>
   </main>
   <footer>
-    <div class="container" id="footer">
+    <div class="container footer" id="footer">
       <ul>
         <li class="listTitle">Workshops</li>
         <li><a href="#">A Mythical Journey</a></li>
@@ -157,34 +176,19 @@
       </ul>
     </div>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $("#hamburger").click(() => {
+        $(".navBox").toggleClass('shown')
+      })
+      $("#close").click(() => {
+        $(".navBox").toggleClass('shown')
+      })
+      $(".navBox a").click(() => {
+        $(".navBox").toggleClass('shown')
+      })
+    </script>
+
 </body>
-
-
-
-
-
-<script>
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-
-</script>
-
-
-
-
-
-
 </html>

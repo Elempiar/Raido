@@ -9,18 +9,37 @@
   <link rel='icon' href='favicon.ico' type='image/x-icon'>
 </head>
 <body>
-  <nav>
-    <img src="img/logoWhite.svg" alt="Raido Code Logo" height="50px" width="50px">
+  <nav class="desktopOnly" id="desktopNav">
+    <div class="containerNav">
+      <img src="img/logoWhite.svg" alt="Raido Code Logo" height="50px" width="50px">
+      <ul>
+        <a href="index.html"><li>Raido</li></a>
+        <a href="#workshops"><li>Workshops</li></a>
+        <a href="#opdrachten"><li>Opdrachten</li></a>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </nav>
+  <nav class="mobileOnly" id="mobileNav">
+    <div class="containerNav">
+      <img src="img/logoWhite.svg" alt="Raido Code Logo" height="50px" width="50px">
+      <button id="hamburger"><img src="img/buttonHamburger.svg" alt="Hamburger button" height="50px"></button>
+      <div class="clear"></div>
+    </div>
+  </nav>
+  <div class="navBox mobileOnly">
     <ul>
+      <button id="close"><li><img src="img/buttonClose.svg" alt="Close button" height="30px"></li></button>
       <a href="index.html"><li>Raido</li></a>
-      <a href="workshop.html"><li>Workshops</li></a>
+      <a href="#workshops"><li>Workshops</li></a>
       <a href="#opdrachten"><li>Opdrachten</li></a>
     </ul>
-    <div class="clear"></div>
-  </nav>
-  <header class="workshop">
+  </div>
+  <header class="home">
+    <div class="containerHero">
     <img id="logo" src="img/logoText.svg" alt="Raido. Het mythische codeer avontuur!">
-    <div id="subLogo">Het mythische codeer avontuur!</div>
+    <h1 class="workshopTitle">A mythical journey</h1>
+    </div>
   </header>
   <main>
     <div class="containerLarge" id="workshop">
@@ -173,25 +192,35 @@
       </ul>
     </div>
   </footer>
-</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
 
-<script>
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
     }
-  });
-}
-
-</script>
-
+    
+    </script>
+    <script>
+      $("#hamburger").click(() => {
+        $(".navBox").toggleClass('shown')
+      })
+      $("#close").click(() => {
+        $(".navBox").toggleClass('shown')
+      })
+      $(".navBox a").click(() => {
+        $(".navBox").toggleClass('shown')
+      })
+    </script>
+</body>
 </html>

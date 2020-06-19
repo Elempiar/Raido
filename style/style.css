@@ -4,16 +4,27 @@
   url('/fonts/ComicRunes.woff') format('woff'),
   url('/fonts/ComicRunes.ttf') format('truetype');
 }
+
+* {
+  box-sizing: border-box;
+}
 :root {
   --mainColor: #E5AF40;
 }
 .clear{
   clear: both;
 }
+.desktopOnly{
+  display: block;
+}
+.mobileOnly{
+  display: none;
+}
+
 body{
   background: #6699CC;
 }
-nav{
+#desktopNav{
   height: 50px;
   width: 100%;
   position: fixed;
@@ -22,22 +33,23 @@ nav{
   z-index: 999;
   background: #6699CC;
 }
-nav img{
-  height: 80px;
+#desktopNav img{
+  height: 40px;
+  padding: 5px;
 }
-nav ul{
+#desktopNav ul{
   float: right;
 }
-nav ul li{
+#desktopNav ul li{
   float: left;
   margin: 0 50px;
   padding: 0 10px;
   line-height: 50px;
 }
-nav ul li:last-of-type{
+#desktopNav ul li:last-of-type{
   margin-right: 0px;
 }
-nav ul li{
+#desktopNav ul li{
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -54,8 +66,63 @@ nav ul li{
   text-decoration: none;
   transition: background-size .2s;
 }
-nav ul li:hover{
+#desktopNav ul li:hover{
   background-size: 4px 50px;
+}
+#mobileNav{
+  position: fixed;
+  background: #6699CC;
+  z-index: 998;
+  width: 100%;
+}
+#mobileNav button{
+  background: none;
+  border: none;
+  float: right;
+  cursor: pointer;
+}
+#mobileNav img{
+  height: 40px;
+  padding: 10px;
+}
+.navBox{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  background: rgba(54, 119, 218, 0.5);
+  z-index: 999;
+  backdrop-filter: blur(50px);
+  transform: translateY(-100%);
+  transition: all 200ms ease-in-out;
+}
+.navBox.shown {
+  transform: translateY(-0%);
+
+}
+.navBox button{
+  background: none;
+  border: none;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  padding: 0;
+}
+.navBox img{
+  float: right;
+  padding: 10px;
+}
+.navBox li{
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #fff7;
 }
 header.home{
   height: 1100px;
@@ -67,22 +134,10 @@ header.home{
   background-size: 1500px;
 }
 header.home #logo{
-  width: 1200px;
-  position: absolute;
-  top: 100px;
-  left: -200px;
-}
-header.home #subLogo{
   width: 600px;
   position: absolute;
-  top: 495px;
-  left: 85px;
-  text-align: center;
-  font-family: 'ComicRunes';
-  text-transform: uppercase;
-  font-size: 45px;
-  color: #E5AF40;
-  text-shadow: 0px 0px 10px rgba(0,0,0,.3);
+  top: 230px;
+  left: 90px;
 }
 header.home #illustration{
   float: right;
@@ -107,18 +162,7 @@ header.workshop #logo{
   bottom: -100px;
   left: -260px;
 }
-header.workshop #subLogo{
-  width: 600px;
-  position: absolute;
-  bottom: 70px;
-  left: 50px;
-  text-align: center;
-  font-family: 'ComicRunes';
-  text-transform: uppercase;
-  font-size: 45px;
-  color: #E5AF40;
-  text-shadow: 0px 0px 10px rgba(0,0,0,.3);
-}
+
 main{
   background: white;
 }
@@ -129,6 +173,11 @@ main{
   display: grid;
   grid-gap: 20px;
 }
+.containerNav{
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
 .containerLarge{
   width: 1200px;
   margin: 0 auto;
@@ -136,6 +185,16 @@ main{
   display: grid;
   grid-gap: 20px;
   position: relative;
+}
+.containerHero{
+  max-width: 1500px;
+  margin: 0 auto;
+  position: relative;
+}
+.containerNoneGrid{
+  width: 800px;
+  margin: 0 auto;
+  max-width: 95%;
 }
 .leftHalf{
   grid-column: 1;
@@ -147,16 +206,21 @@ main{
 .rightHalf{
   grid-column: 2;
 }
-.leftTri{
-  grid-column: 1;
-  margin-left: 0;
+
+.teamFaces{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
 }
-.middleTri{
-  grid-column: 2;
+
+.facesTitle {
+  text-align: center;
+  grid-column: span 3;
 }
-.rightTri{
-  grid-column: 3;
-}
+
+
+
+
 .container + .container{
   padding-top: 0;
   margin-top: -50px;
@@ -401,6 +465,11 @@ a.download:hover > .btnText{
 .panel .container p{
   margin-bottom: 0;
 }
+
+.footer {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 footer{
   height: 500px;
   padding-top: 200px;
@@ -409,12 +478,12 @@ footer{
   background-repeat: repeat-x;
   background-size: 1000px;
 }
+
 #footer ul{
   width: 200px;
   color: white;
   font-size: 12px;
   line-height: 2em;
-  grid-row: 1;
   padding: 5px;
 }
 #footer ul .listTitle{
@@ -455,14 +524,23 @@ a{
   font-weight: 700;
 }
 h1{
-  font-family: 'Crimson Text', serif;;
+  font-family: 'Crimson Text', serif;
   font-size: 2em;
   margin-bottom: 1.5em;
   font-weight: 700;
+  display: inline-block;
+  margin-top: 25px;
 }
 h1.center{
   text-align: center;
   margin: 0;
+}
+h1.introText{
+  color: #E5AF40;
+  font-size: 1.5em;
+}
+.introLogo{
+  float: left;
 }
 h2{
   font-family: 'Crimson Text', serif;;
@@ -506,4 +584,96 @@ h4 + p{
   font-family: 'Crimson Text', serif;
   font-size: 1.4em;
   font-weight: 600;
+}
+
+.threeColumns {
+grid-template-columns: repeat(3, 1fr);
+}
+
+.workshops {
+  text-align: center;
+}
+
+.workshops h4, .workshops p {
+  padding: 0;
+}
+
+.workshopTitle {
+  position: absolute;
+  top: 600px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .sectionRight{
+    margin-left: 5%;
+    padding-right: 5%;
+  }
+  .sectionLeft{
+    margin-right: 5%;
+    padding-left: 5%;
+  }
+  .sectionRight .container{
+    padding-right: 5%;
+  }
+  .sectionLeft .container{
+    padding-left: 5%;
+  }
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .rightHalf{
+    grid-column: 1;
+  }
+  .container{
+    width: 95%;
+  }
+  .middletri{
+    grid-column: 1;
+  }
+  .rightTri{
+    grid-column: 1;
+  }
+
+  .facesTitle {
+    grid-column: 1;
+
+  }
+
+  .teamFaces {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+
+}
+
+@media only screen and (max-width: 850px) {
+  header.home #logo{
+    left: 15%;
+    width: 70%;
+  }
+  header.home #illustration{
+    width: 300px;
+    margin-right: 5%;
+    margin-top: 530px;
+  }
+
+  .threeColumns {
+    grid-template-columns: 1fr;
+    }
+
+  .desktopOnly{
+    display: none;
+  }
+  .mobileOnly{
+    display: block;
+  }
 }
