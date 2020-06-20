@@ -9,7 +9,11 @@
   box-sizing: border-box;
 }
 :root {
-  --mainColor: #E5AF40;
+  --mainColor: #6699CC;
+  --mainShade: #C5D6E2;
+  --accentColor: #E5AF40;
+  --white: #fff;
+  --black: #000;
 }
 .clear{
   clear: both;
@@ -20,9 +24,20 @@
 .mobileOnly{
   display: none;
 }
-
 body{
   background: #6699CC;
+
+}
+.cta{
+  background: var(--mainColor);
+  color: var(--white);
+  width: 200px;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-top: 2em;
 }
 #desktopNav{
   height: 50px;
@@ -34,7 +49,7 @@ body{
   background: #6699CC;
 }
 #desktopNav img{
-  height: 40px;
+  height: 50px;
   padding: 5px;
 }
 #desktopNav ul{
@@ -57,8 +72,8 @@ body{
   text-transform: capitalize;
   background:
      linear-gradient(
-       to bottom, var(--mainColor) 0%,
-       var(--mainColor) 100%
+       to bottom, var(--accentColor) 0%,
+       var(--accentColor) 100%
      );
     background-position: 0 100%;
     background-repeat: repeat-x;
@@ -82,23 +97,23 @@ body{
   cursor: pointer;
 }
 #mobileNav img{
-  height: 40px;
-  padding: 10px;
+  height: 50px;
+  padding: 5px;
 }
 .navBox{
   width: 100%;
   position: fixed;
   top: 0;
   height: 100%;
-  background: rgba(54, 119, 218, 0.5);
+  background: #6699cccb;
   z-index: 999;
   backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
   transform: translateY(-100%);
   transition: all 200ms ease-in-out;
 }
 .navBox.shown {
   transform: translateY(-0%);
-
 }
 .navBox button{
   background: none;
@@ -110,7 +125,8 @@ body{
 }
 .navBox img{
   float: right;
-  padding: 10px;
+  height: 45px;
+  padding: 15px 20px 10px 10px;
 }
 .navBox li{
   height: 50px;
@@ -123,8 +139,9 @@ body{
   text-transform: uppercase;
   font-size: 0.8rem;
   border-bottom: 1px solid #fff7;
+  background: #6699CC;
 }
-header.home{
+header{
   height: 1100px;
   position: relative;
   background: #6699CC;
@@ -132,37 +149,22 @@ header.home{
   background-position: bottom;
   background-repeat: repeat-x;
   background-size: 1500px;
+  margin-bottom: -300px;
+  z-index: -10;
 }
-header.home #logo{
+header #logo{
   width: 600px;
   position: absolute;
   top: 230px;
   left: 90px;
 }
-header.home #illustration{
+header #illustration{
   float: right;
   transform: scaleX(-1);
   width: 465px;
   margin-top: 480px;
   margin-right: 120px;
-
 }
-header.workshop{
-  height: 700px;
-  position: relative;
-  background: #6699CC;
-  background-image: url("/img/repeatableClouds.svg");
-  background-position: bottom;
-  background-repeat: repeat-x;
-  background-size: 1000px;
-}
-header.workshop #logo{
-  width: 1200px;
-  position: absolute;
-  bottom: -100px;
-  left: -260px;
-}
-
 main{
   background: white;
 }
@@ -191,10 +193,11 @@ main{
   margin: 0 auto;
   position: relative;
 }
-.containerNoneGrid{
+.containerIntro{
   width: 800px;
-  margin: 0 auto;
+  margin: 150px auto 0;
   max-width: 95%;
+  margin-bottom: 5rem;
 }
 .leftHalf{
   grid-column: 1;
@@ -206,67 +209,62 @@ main{
 .rightHalf{
   grid-column: 2;
 }
-
 .teamFaces{
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(3, 1fr);
+  text-align: center;
 }
-
 .facesTitle {
   text-align: center;
   grid-column: span 3;
 }
-
-
-
-
+.reviewContain{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.reviewTitle {
+  grid-column: span 3;
+}
+.threeColumns{
+  grid-template-columns: repeat(3, 1fr);
+}
+.workshops{
+  text-align: center;
+}
+.workshops h4, .workshops p{
+  padding: 0;
+}
+.workshopTitle {
+  position: absolute;
+  top: 600px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+}
 .container + .container{
   padding-top: 0;
   margin-top: -50px;
 }
 iframe{
-  width: 100%;
+  width: 800px;
   height: 450px;
   border-radius: 10px;
+  margin: 0 auto;
+}
+.promovid{
+  margin-bottom: -150px;
 }
 .sectionLeft .container{
-  padding-left: 200px;
+  padding-left: 50px;
 }
 .sectionRight .container{
   padding-right: 200px;
-}
-a.download:hover > .btnCloud{
-  top: 130px;
-}
-a.download:hover > .btnDownload{
-  top: 55px;
-}
-a.download:hover > .btnText{
-  top: 395px;
-}
-.btnDownload{
-  height: 500px;
-  position: absolute;
-  right: 250px;
-  top: 60px;
-  transition: all .2s ease-out;
-}
-.btnCloud{
-  width: 600px;
-  position: absolute;
-  right: 0;
-  top: 135px;
-  transition: all .2s ease-out;
-}
-.btnText{
-  position: absolute;
-  right: 150px;
-  top: 400px;
-  font-family: 'ComicRunes';
-  font-size: 40px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  transition: all .2s ease-out;
 }
 .sectionCentered{
   background: #C5D6E2;
@@ -277,7 +275,7 @@ a.download:hover > .btnText{
   background: #C5D6E2;
   border: 2px solid #6699CC;
   border-left: none;
-  margin-right: 200px;
+  margin-right: 100px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -286,7 +284,7 @@ a.download:hover > .btnText{
   border: 2px solid #6699CC;
   border-right: none;
   margin-right: 0px;
-  margin-left: 200px;
+  margin-left: 100px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -314,33 +312,15 @@ a.download:hover > .btnText{
   margin: 0 auto 1em;
 }
 .review{
-  width: 200px;
-  height: 260px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  margin: 20px auto 0;
-  transition: all .2s ease-out;
-}
-.leftTri > .review{
-  margin-left: 0;
-}
-.rightTri > .review{
-  margin-right: 0;
-}
-.reviewLarge{
-  width: 240px;
   height: 300px;
+  width: 254px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   margin: 0 auto;
-  transition: all .2s ease-out;
-}
-#team h2{
-  margin-bottom: 2em;
-}
-#team .leftTri, #team .middleTri, #team .rightTri{
+  padding: 0 10px;
   text-align: center;
 }
-#team img{
-  margin-bottom: 1.5em;
+.reviewScore{
+  padding: 20px 0 0;
 }
 .accordion{
   cursor: pointer;
@@ -364,7 +344,8 @@ a.download:hover > .btnText{
   content: '\002B';
   float: right;
   color: rgba(0, 0, 0, 0.6);
-  font-size: 20px;
+  font-size: 30px;
+  line-height: 1rem;
   margin-left: 5px;
 }
 .active:after{
@@ -465,11 +446,9 @@ a.download:hover > .btnText{
 .panel .container p{
   margin-bottom: 0;
 }
-
 .footer {
   grid-template-columns: repeat(4, 1fr);
 }
-
 footer{
   height: 500px;
   padding-top: 200px;
@@ -478,7 +457,6 @@ footer{
   background-repeat: repeat-x;
   background-size: 1000px;
 }
-
 #footer ul{
   width: 200px;
   color: white;
@@ -544,14 +522,16 @@ h1.introText{
 }
 h2{
   font-family: 'Crimson Text', serif;;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 700;
   margin-bottom: 1.5em;
+  line-height: 1.5em;
 }
 h3{
   font-family: 'Crimson Text', serif;;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 700;
+  margin-top: 1em;
 }
 h3 + p{
   font-size: 0.8em;
@@ -572,7 +552,6 @@ h4 + p{
   color: rgba(0, 0, 0, 0.5);
   padding-left: 32px;
 }
-
 .panelWrapper h2{
   font-family: 'ComicRunes';
   font-size: 2em;
@@ -585,47 +564,36 @@ h4 + p{
   font-size: 1.4em;
   font-weight: 600;
 }
-
-.threeColumns {
-grid-template-columns: repeat(3, 1fr);
-}
-
-.workshops {
-  text-align: center;
-}
-
-.workshops h4, .workshops p {
-  padding: 0;
-}
-
-.workshopTitle {
-  position: absolute;
-  top: 600px;
-  width: 100%;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
+h5{
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1.5em;
+}
+.reviewNaam{
+  font-size: 16px;
+  text-decoration: underline;
+  margin-bottom: 1em;
+}
+.reviewText{
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
-@media only screen and (max-width: 1200px) {
-
+@media only screen and (max-width: 1250px){
   .sectionRight{
-    margin-left: 5%;
-    padding-right: 5%;
+    margin-left: 1%;
+    padding-right: 1%;
   }
   .sectionLeft{
-    margin-right: 5%;
-    padding-left: 5%;
+    margin-right: 1%;
+    padding-left: 1%;
   }
   .sectionRight .container{
-    padding-right: 5%;
+    padding-right: 0;
   }
   .sectionLeft .container{
-    padding-left: 5%;
+    padding-left: 0;
   }
-  .footer {
+  .footer{
     grid-template-columns: repeat(1, 1fr);
   }
   .rightHalf{
@@ -633,6 +601,18 @@ grid-template-columns: repeat(3, 1fr);
   }
   .container{
     width: 95%;
+    max-width: 800px;
+  }
+  .containerLarge{
+    width: 95%;
+    max-width: 800px;
+  }
+  .containerLarge img{
+    display: none;
+  }
+  .containerIntro{
+    width: 95%;
+    max-width: 800px;
   }
   .middletri{
     grid-column: 1;
@@ -640,40 +620,55 @@ grid-template-columns: repeat(3, 1fr);
   .rightTri{
     grid-column: 1;
   }
-
-  .facesTitle {
+  .facesTitle{
     grid-column: 1;
-
   }
-
-  .teamFaces {
+  .teamFaces{
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
   }
-
-
+  .reviewContain{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .reviewTitle{
+    grid-column: 1;
+  }
+  .reviewLarge{
+    margin: 0 auto;
+  }
+  .workshopTitle{
+    font-size: 3rem;
+  }
 }
 
-@media only screen and (max-width: 850px) {
-  header.home #logo{
-    left: 15%;
-    width: 70%;
+@media only screen and (max-width: 850px){
+  header #logo{
+    left: 0;
+    width: 100%;
+    max-width: 600px;
   }
-  header.home #illustration{
+  header #illustration{
     width: 300px;
     margin-right: 5%;
     margin-top: 530px;
   }
-
-  .threeColumns {
+  iframe{
+    width: 100%;
+    height: 400px;
+  }
+  .threeColumns{
     grid-template-columns: 1fr;
-    }
-
+  }
   .desktopOnly{
     display: none;
   }
   .mobileOnly{
     display: block;
+  }
+  .workshopTitle{
+    font-size: 2.5rem;
   }
 }
