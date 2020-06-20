@@ -58,6 +58,8 @@ a{
   background-size: 4px 110px;
 }
 .btnDownload{
+  width: 100%;
+  line-height: 75px;
   margin: 0 auto;
 }
 #desktopNav{
@@ -413,7 +415,7 @@ iframe{
   transition: max-height 0.4s ease-out;
 }
 #opdracht1{
-  background-color: rgba(76, 175, 78, 0.8);
+  background-color: rgba(76, 175, 78, 0.6);
 }
 #opdracht1.active, #opdracht1:hover{
   background-color: rgba(76, 175, 78);
@@ -427,7 +429,7 @@ iframe{
   background-size: 700px;
 }
 #opdracht2{
-  background-color: rgba(141, 97, 80, 0.8);
+  background-color: rgba(141, 97, 80, 0.6);
 }
 #opdracht2.active, #opdracht2:hover{
   background-color: rgb(141, 97, 80);
@@ -441,7 +443,7 @@ iframe{
   background-size: 700px;
 }
 #opdracht3{
-  background-color: rgba(239, 68, 56, 0.8);
+  background-color: rgba(239, 68, 56, 0.6);
 }
 #opdracht3.active, #opdracht3:hover{
   background-color: rgb(239, 68, 56);
@@ -455,13 +457,13 @@ iframe{
   background-size: 700px;
 }
 #opdracht4{
-  background-color: rgba(102, 153, 204, 0.8);
+  background-color: rgba(102, 153, 204, 0.6);
 }
 #opdracht4.active, #opdracht4:hover{
   background-color: rgba(102, 153, 204);
 }
 #opdracht4.active{
-  border-bottom: 1px solid rgb(19, 17, 53);
+  border-bottom: 1px solid rgb(70, 110, 223);
 }
 #opdracht4 + .panel{
   background-color: rgb(44, 55, 136);
@@ -469,7 +471,7 @@ iframe{
   background-size: 700px;
 }
 #opdracht5{
-  background-color: rgba(245, 165, 200, 0.8);
+  background-color: rgba(245, 165, 200, 0.6);
 }
 #opdracht5.active, #opdracht5:hover{
   background-color: rgb(245, 165, 200);
