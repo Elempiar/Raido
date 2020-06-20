@@ -4,7 +4,6 @@
   url('/fonts/ComicRunes.woff') format('woff'),
   url('/fonts/ComicRunes.ttf') format('truetype');
 }
-
 * {
   box-sizing: border-box;
 }
@@ -26,7 +25,10 @@
 }
 body{
   background: #6699CC;
-
+ scroll-behavior: smooth;
+}
+a{
+  cursor: pointer;
 }
 .cta{
   background: var(--mainColor);
@@ -57,14 +59,10 @@ body{
 }
 #desktopNav ul li{
   float: left;
-  margin: 0 50px;
+  margin: 0 30px;
   padding: 0 10px;
   line-height: 50px;
-}
-#desktopNav ul li:last-of-type{
-  margin-right: 0px;
-}
-#desktopNav ul li{
+  cursor: pointer;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -199,6 +197,11 @@ main{
   max-width: 95%;
   margin-bottom: 5rem;
 }
+.containerSlider{
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
+}
 .leftHalf{
   grid-column: 1;
 }
@@ -217,14 +220,6 @@ main{
 }
 .facesTitle {
   text-align: center;
-  grid-column: span 3;
-}
-.reviewContain{
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-}
-.reviewTitle {
   grid-column: span 3;
 }
 .threeColumns{
@@ -311,16 +306,30 @@ iframe{
   background: white;
   margin: 0 auto 1em;
 }
+.reviewSlider{
+  width: 100%;
+}
 .review{
+  background: var(--mainShade);
+  border-radius: 50px;
+  border: 2px solid var(--mainColor);
   height: 300px;
   width: 254px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  margin: 0 auto;
-  padding: 0 10px;
+  padding: 10px;
   text-align: center;
+}
+.reviewTitle{
+  width: 100%;
+  text-align: center;
+}
+.slick-slide{
+  margin-left: 30px;
 }
 .reviewScore{
   padding: 20px 0 0;
+}
+.reviewScore img{
+  display: inline-block;
 }
 .accordion{
   cursor: pointer;
@@ -628,22 +637,10 @@ h5{
     justify-items: center;
     text-align: center;
   }
-  .reviewContain{
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-  .reviewTitle{
-    grid-column: 1;
-  }
-  .reviewLarge{
-    margin: 0 auto;
-  }
   .workshopTitle{
     font-size: 3rem;
   }
 }
-
 @media only screen and (max-width: 850px){
   header #logo{
     left: 0;
