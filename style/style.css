@@ -7,7 +7,7 @@
 * {
   box-sizing: border-box;
 }
-:root {
+:root{
   --mainColor: #6699CC;
   --mainShade: #C5D6E2;
   --accentColor: #E5AF40;
@@ -36,6 +36,7 @@ a{
   width: 200px;
   text-align: center;
   line-height: 2em;
+  border: 3px solid var(--accentColor);
   border-radius: 10px;
   font-size: 20px;
   text-transform: uppercase;
@@ -50,11 +51,14 @@ a{
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 4px 0px;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: background-size .2s;
 }
 .ctaHover:hover{
-  background-size: 4px 50px;
+  background-size: 4px 110px;
+}
+.btnDownload{
+  margin: 0 auto;
 }
 #desktopNav{
   height: 50px;
@@ -188,6 +192,9 @@ main{
   display: grid;
   grid-gap: 20px;
 }
+.gap100{
+  grid-gap: 100px;
+}
 .containerNav{
   width: 1200px;
   max-width: 100%;
@@ -314,12 +321,14 @@ iframe{
   width: 345px;
   height: 345px;
   background: white;
+  border-radius: 10px;
 }
 .thumbnailTall{
   width: 200px;
   height: 290px;
   background: white;
   margin: 0 auto 1em;
+  border-radius: 10px;
 }
 #thumbWorkshop1{
   background-image: url("/img/thumbLarge.png");
@@ -446,10 +455,10 @@ iframe{
   background-size: 700px;
 }
 #opdracht4{
-  background-color: rgba(44, 55, 136, 0.8);
+  background-color: rgba(102, 153, 204, 0.8);
 }
 #opdracht4.active, #opdracht4:hover{
-  background-color: rgb(44, 55, 136);
+  background-color: rgba(102, 153, 204);
 }
 #opdracht4.active{
   border-bottom: 1px solid rgb(19, 17, 53);
