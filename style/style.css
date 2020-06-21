@@ -55,9 +55,11 @@ a{
   background-size: 4px 0px;
   border-radius: 5px;
   transition: background-size .2s;
+  font-weight: 700;
 }
 .ctaHover:hover{
   background-size: 4px 110px;
+  color: var(--mainColor);
 }
 .btnDownload{
   width: 100%;
@@ -104,6 +106,7 @@ a{
 }
 #desktopNav ul li:hover{
   background-size: 4px 50px;
+  color: var(--mainColor);
 }
 #mobileNav{
   position: fixed;
@@ -118,8 +121,8 @@ a{
   cursor: pointer;
 }
 #mobileNav img{
-  height: 50px;
-  padding: 5px;
+  height: 40px;
+  padding-top: 10px;
 }
 .navBox{
   width: 100%;
@@ -375,7 +378,7 @@ main{
 .reviewScore img{
   display: inline-block;
 }
-.accordion{
+.accordionOpdr{
   cursor: pointer;
   padding: 20px;
   width: 100%;
@@ -390,7 +393,7 @@ main{
 .accordionSub{
   margin-left: 30px;
 }
-.accordion:after{
+.accordionOpdr:after{
   content: '\002B';
   float: right;
   color: rgba(0, 0, 0, 0.6);
@@ -544,7 +547,7 @@ a{
   color: var(--textColor);
   text-decoration: none;
 }
-.accordion{
+.accordionOpdr{
   font-family: 'Crimson Text', serif;
   font-size: 22px;
 }
@@ -645,6 +648,7 @@ h5{
   }
   .footer{
     grid-template-columns: repeat(1, 1fr);
+    padding-left: 10%;
   }
   .rightHalf{
     grid-column: 1;
@@ -680,6 +684,23 @@ h5{
   }
   .workshopTitle{
     font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 860px){
+  .panel .container{
+    width: 100%;
+    margin-bottom: 150px;
+  }
+  .panelWrapper{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .panelWrapper img{
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    margin-right: 5%;
   }
 }
 @media only screen and (max-width: 850px){
