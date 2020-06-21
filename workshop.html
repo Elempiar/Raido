@@ -6,6 +6,9 @@
   <title>Raido - Het mythische codeer avontuur!</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
+  <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style/style.css">
   <link rel='icon' href='favicon.ico' type='image/x-icon'>
 </head>
@@ -127,19 +130,40 @@
     <div class="sectionClear">
       <div class="container">
         <h2>Introductie aan de workshop</h2>
-        <iframe src="https://player.vimeo.com/external/430853177.hd.mp4?s=b5fb5ee63600559749e4a1959a2ce577b616a1b6&profile_id=175"></iframe>
+        <video id="tutorial1" class="video-js" controls preload="auto" width="800px" poster="img/thumb-tutorial_1.png" data-setup="{}" >
+          <source src="https://player.vimeo.com/external/430853177.hd.mp4?s=b5fb5ee63600559749e4a1959a2ce577b616a1b6&profile_id=175" type="video/mp4"/>
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+        </video>
       </div>
     </div>
     <div class="sectionLeft">
       <div class="container">
         <h2>Uitleg van de workshop</h2>
-        <iframe src="https://player.vimeo.com/external/431042017.hd.mp4?s=9f59d7943ff24862c7fe12d19b2aec31690444bd&profile_id=175"></iframe>
+        <video id="tutorial2" class="video-js" controls preload="auto" width="800px" poster="img/thumb-tutorial_2.png" data-setup="{}" >
+          <source src="https://player.vimeo.com/external/431042017.hd.mp4?s=9f59d7943ff24862c7fe12d19b2aec31690444bd&profile_id=175" type="video/mp4"/>
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+        </video>
       </div>
     </div>
     <div class="sectionClear">
       <div class="container">
         <h2>Het opzetten van de workshop</h2>
-        <iframe src="//www.youtube.com/embed/0KKMUxn8FZI?controls=0"></iframe>
+        <video id="tutorial3" class="video-js" controls preload="auto" width="800px" poster="img/thumb-tutorial_3.png" data-setup="{}" >
+          <source src="//www.youtube.com/embed/0KKMUxn8FZI?controls=0" type="video/mp4"/>
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+        </video>
       </div>
     </div>
     <div class="sectionCentered">
@@ -195,34 +219,12 @@
       </ul>
     </div>
   </footer>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-    </script>
-
-    <script>
-      $("#hamburger").click(() => {
-        $(".navBox").toggleClass('shown')
-      })
-      $("#close").click(() => {
-        $(".navBox").toggleClass('shown')
-      })
-      $(".navBox a").click(() => {
-        $(".navBox").toggleClass('shown')
-      })
-    </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/accordion.js"></script>
 </body>
 </html>

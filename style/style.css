@@ -9,10 +9,12 @@
 }
 :root{
   --mainColor: #6699CC;
+  --mainColorFade: #6699cccb;
   --mainShade: #C5D6E2;
   --accentColor: #E5AF40;
-  --white: #fff;
-  --black: #000;
+  --backgroundColor: #fff;
+  --textColor: #000;
+  --textColorFade: rgba(0, 0, 0, 0.5);
 }
 .clear{
   clear: both;
@@ -24,7 +26,7 @@
   display: none;
 }
 body{
-  background: #6699CC;
+  background: var(--mainColor);
  scroll-behavior: smooth;
 }
 a{
@@ -32,7 +34,7 @@ a{
 }
 .cta{
   background: var(--mainColor);
-  color: var(--white);
+  color: white;
   width: 200px;
   text-align: center;
   line-height: 2em;
@@ -69,7 +71,7 @@ a{
   padding: 0 120px;
   box-sizing: border-box;
   z-index: 999;
-  background: #6699CC;
+  background: var(--mainColor);
 }
 #desktopNav img{
   height: 50px;
@@ -86,7 +88,7 @@ a{
   cursor: pointer;
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: white;
   text-decoration: none;
   text-transform: capitalize;
   background:
@@ -105,7 +107,7 @@ a{
 }
 #mobileNav{
   position: fixed;
-  background: #6699CC;
+  background: var(--mainColor);
   z-index: 998;
   width: 100%;
 }
@@ -124,7 +126,7 @@ a{
   position: fixed;
   top: 0;
   height: 100%;
-  background: #6699cccb;
+  background: var(--mainColorFade);
   z-index: 999;
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
@@ -158,12 +160,12 @@ a{
   text-transform: uppercase;
   font-size: 0.8rem;
   border-bottom: 1px solid #fff7;
-  background: #6699CC;
+  background: var(--mainColor);
 }
 header{
   height: 1100px;
   position: relative;
-  background: #6699CC;
+  background: var(--mainColor);
   background-image: url("/img/repeatableClouds.svg");
   background-position: bottom;
   background-repeat: repeat-x;
@@ -185,7 +187,7 @@ header #illustration{
   margin-right: 120px;
 }
 main{
-  background: white;
+  background: var(--backgroundColor);
 }
 .container{
   width: 800px;
@@ -270,12 +272,6 @@ main{
   padding-top: 0;
   margin-top: -50px;
 }
-iframe{
-  width: 800px;
-  height: 450px;
-  border-radius: 10px;
-  margin: 0 auto;
-}
 .promovid{
   margin-bottom: -150px;
 }
@@ -286,21 +282,21 @@ iframe{
   padding-right: 200px;
 }
 .sectionCentered{
-  background: #C5D6E2;
-  border-top: 2px solid #6699CC;
-  border-bottom: 2px solid #6699CC;
+  background: var(--mainShade);
+  border-top: 2px solid var(--mainColor);
+  border-bottom: 2px solid var(--mainColor);
 }
 .sectionLeft{
-  background: #C5D6E2;
-  border: 2px solid #6699CC;
+  background: var(--mainShade);
+  border: 2px solid var(--mainColor);
   border-left: none;
   margin-right: 100px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 .sectionRight{
-  background: #C5D6E2;
-  border: 2px solid #6699CC;
+  background: var(--mainShade);
+  border: 2px solid var(--mainColor);
   border-right: none;
   margin-right: 0px;
   margin-left: 100px;
@@ -309,26 +305,26 @@ iframe{
 }
 .sectionClouds{
   padding-top: 200px;
-  background: #C5D6E2;
+  background: var(--mainShade);
   background-image: url("/img/repeatableCloudsFlipped.svg");
   background-position: top;
   background-repeat: repeat-x;
   background-size: 1000px;
-  border-bottom: 2px solid #6699CC;
+  border-bottom: 2px solid var(--mainColor);
 }
 .sectionClean{
-  background: white;
+  background: var(--backgroundColor);
 }
 .thumbnailLarge{
   width: 345px;
   height: 345px;
-  background: white;
+  background: var(--backgroundColor);
   border-radius: 10px;
 }
 .thumbnailTall{
   width: 200px;
   height: 290px;
-  background: white;
+  background: var(--backgroundColor);
   margin: 0 auto 1em;
   border-radius: 10px;
 }
@@ -393,9 +389,6 @@ iframe{
 }
 .accordionSub{
   margin-left: 30px;
-}
-.active, .accordion:hover{
-  background-color: #CCC;
 }
 .accordion:after{
   content: '\002B';
@@ -548,7 +541,7 @@ p{
   margin-bottom: 1.5em;
 }
 a{
-  color: #000;
+  color: var(--textColor);
   text-decoration: none;
 }
 .accordion{
@@ -571,7 +564,7 @@ h1.center{
   margin: 0;
 }
 h1.introText{
-  color: #E5AF40;
+  color: var(--accentColor);
   font-size: 1.5em;
 }
 .introLogo{
@@ -594,7 +587,7 @@ h3 + p{
   font-size: 0.8em;
   margin-bottom: 1.5em;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--textColorFade);
 }
 h4{
   font-family: 'Crimson Text', serif;;
@@ -606,7 +599,7 @@ h4 + p{
   font-size: 0.8em;
   font-weight: 400;
   margin-bottom: 1.5em;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--textColorFade);
   padding-left: 32px;
 }
 .panelWrapper h2{
@@ -700,9 +693,9 @@ h5{
     margin-right: 5%;
     margin-top: 530px;
   }
-  iframe{
+  .video-js{
     width: 100%;
-    height: 250px;
+    height: calc(92.5vw / 16 * 9);
   }
   .threeColumns{
     grid-template-columns: 1fr;

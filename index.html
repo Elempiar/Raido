@@ -6,9 +6,9 @@
   <title>Raido - Het mythische codeer avontuur!</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Montserrat:wght@400;600;700&display=swap">
   <link rel="stylesheet" href="style/reset.css">
-  
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
+  <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style/style.css">
   <link rel='icon' href='favicon.ico' type='image/x-icon'>
 </head>
@@ -65,7 +65,14 @@
     </div>
     <div class="container">
       <h1>Dit is Raido Code</h1>
-      <iframe class="promovid" src="https://player.vimeo.com/external/430853403.hd.mp4?autoplay=0&s=0abd078e6aeee90d0a2fc27c9e88420ef4339cd0&profile_id=175"></iframe>
+      <video id="promovideo" class="video-js" controls preload="auto" width="800px" poster="img/thumb-promo.png" data-setup="{}" >
+        <source src="https://player.vimeo.com/external/430853403.hd.mp4?s=0abd078e6aeee90d0a2fc27c9e88420ef4339cd0&profile_id=175" type="video/mp4"/>
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+      </video>
     </div>
     <div class="sectionClouds" id="scrlWorkshops">
       <div class="container">
@@ -229,70 +236,15 @@
         <li><a>Licensies</a></li>
         <li><a>Copyright</a></li>
         <li class="listTitle">Version</li>
-        <li>LIVE v1.0</li>
+        <li>LIVE v1.1</li>
       </ul>
     </div>
   </footer>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
-    <script>
-      $(document).ready(() => {
-        $('.reviewSlider').slick({
-          infinite: true,
-          arrows: false,
-          autoplay: true,
-          pauseOnHover: false,
-          autoplaySpeed: 0,
-          speed: 5000,
-          cssEase: 'linear',
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          responsive: [
-            {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 950,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1.5
-              }
-            }
-            
-          ]
-        })
-      })
-      $("#hamburger").click(() => {
-        $(".navBox").toggleClass('shown')
-      })
-      $("#close").click(() => {
-        $(".navBox").toggleClass('shown')
-      })
-      $(".navBox a").click(() => {
-        $(".navBox").toggleClass('shown')
-      })
-      $("#btnHome").click(() => {
-        $.scrollTo('#scrlHome', 800)
-      })
-      $("#btnWorkshops").click(() => {
-        $.scrollTo('#scrlWorkshops', 800)
-      })
-      $("#btnTeam").click(() => {
-        $.scrollTo('#scrlTeam', 800)
-      })
-    </script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
